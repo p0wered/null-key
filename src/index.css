@@ -31,7 +31,20 @@
   }
 
   #root {
-    @apply flex min-h-dvh flex-col p-3 sm:px-6 sm:py-8 sm:pb-10 lg:px-9 lg:pt-11 lg:pb-14;
+    @apply flex min-h-dvh flex-col px-3 pb-3 sm:px-6 sm:pb-10 lg:px-9 lg:pb-14;
+    padding-top: calc(0.75rem + env(safe-area-inset-top));
+  }
+
+  @media (min-width: 640px) {
+    #root {
+      padding-top: calc(2rem + env(safe-area-inset-top));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #root {
+      padding-top: calc(2.75rem + env(safe-area-inset-top));
+    }
   }
 
   @media (min-width: 1024px) {
